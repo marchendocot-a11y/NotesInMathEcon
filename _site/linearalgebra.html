@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Marchen Kirk James I. Docot">
 
-<title>MarcheNOTES</title>
+<title>Linear Algebra – MarcheNOTES</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -83,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linearalgebra.html">Linear Algebra</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -121,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link">
+  <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Linear Algebra</span></a>
   </div>
 </li>
@@ -130,27 +158,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-linear-algebra" id="toc-introduction-to-linear-algebra" class="nav-link active" data-scroll-target="#introduction-to-linear-algebra">Introduction to Linear Algebra</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MarcheNOTES</h1>
+<h1 class="title">Linear Algebra</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Marchen Kirk James I. Docot </p>
-          </div>
-  </div>
     
   
     
@@ -161,13 +189,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>This page is dedicated to my Nina.</em></p>
-<p>This serves as the repository of all lecture notes related to R and its applications in mathematical finance, economics, statistics &amp; probability, and</p>
-<p>This page will primarily be as a submission bin for all my lecture notes currently in my Mathematical Economics in R (LBYMATH) classes in De La Salle University, currently being taken this Term 3, A.Y. 2025-2026. However, I also plan for it to be a repository of my notes in my Financial Management (ACYFMG) series of courses, with corresponding R applications.</p>
-<p>This may be maintained in my further years in my economics journey, potentially as lecture notes for Economic Statistics, Econometrics, Advanced Financial Econometrics, and even as a thesis journal showcasing the journey for whatever thesis (whether in my economics thesis or accountancy thesis).</p>
-<p>For any questions and inquiries, feel free to check this site’s <a href="./about.html">About</a> page.</p>
+<section id="introduction-to-linear-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-linear-algebra">Introduction to Linear Algebra</h2>
+<blockquote class="blockquote">
+<p><strong>Linear algebra</strong> deals with a system of linear equations which usually express how one or more endogenous variables depend on several exogenous parameters.</p>
+</blockquote>
+<p>To understand what linear algebra entails aside from it formalizing solving “simultaneous” or systems of linear equations, it is apt to dissect this definition with accuracy.</p>
+<p><strong><em>“system of linear equations”</em></strong></p>
+<p>Linear equations need no introduction, it takes up the form: <span class="math inline">\(Ax + Bx = C, A \geq 0\)</span></p>
+<p>A <strong>system</strong> means that multiple linear equations are happening simultaneously, and it is trying to look for solutions that satisfies all the equations simultaneously.</p>
+<p><strong><em>“one or more endogenous variables”</em></strong></p>
+<p>Endogenous variables simply means dependent variables or “unknowns.” These are the values that the system finds solutions for such that the endogenous variables satisfies all the equations in a system simultaneously.</p>
+<p><strong><em>“depend on several exogenous paramaters”</em></strong></p>
+<p>Parameters simply means variables that are constant.</p>
+<p>In a system wherein we have <em>m</em> equations and <em>n</em> unknowns, and no restriction on what <em>m</em> can be relative to <em>n</em> (i.e., it can be greater than, equal to, or less than), v.v., and if the unknowns are denoted as <span class="math inline">\(x_1, x_2, x_3, ...,x_n\)</span> , we write the system as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &amp;= b_2 \\
+&amp;\ \ \vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &amp;= b_m
+\end{aligned}
+\]</span></p>
+<p>In this system <span class="math inline">\(C =a_{11}, a_{12},...,a_{mn}\)</span> are coefficients whereas <span class="math inline">\(R = b_1, b_2,...,b_n\)</span> are right-hand sides such that <span class="math inline">\(C, R, \in \mathbb{R}\)</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

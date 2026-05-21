@@ -1,9 +1,34 @@
 ---
 title: "About"
+about:
+  template: trestles # This creates a clean side-by-side split layout
+  # image: profile.jpg # Uncomment this line (remove the #) if you want to add a profile picture later!
+  links:
+    - icon: envelope
+      text: Personal Email
+      href: mailto:marchen.docot@gmail.com
+    - icon: envelope-at
+      text: School Email
+      href: mailto:marchen_docot@dlsu.edu.ph
+    - icon: github
+      text: GitHub
+      href: https://github.com/marchendocot-a11y
 ---
 
-About this site
+## Marchen Kirk James I. Docot
 
-```{r}
-1 + 1
-```
+**De La Salle University — Carlos L. Tiu School of Economics**
+
+*Bachelor of Science in Applied Economics, major in Financial Economics & Bachelor of Science in Accountancy*
+
+------------------------------------------------------------------------
+
+### General Information
+
+The notes per topic will primarily be lecture notes derived from [Mr. Miko Johnson Co's](https://contactout.com/miko-johnson-co-68778) lectures and discussions in the course Mathematical Economics Laboratory (LBYMATH). For the purpose of clarity, I will be referring to the course as Mathematical Economics in R or simply by its course code.
+
+Some interjections in mathematical theory will be derived from [Dr. Krista Danielle Yu](https://www.linkedin.com/in/krista-danielle-yu-971577a1/)'s lecture notes for the parent course – Mathematical Economics (ECOMATH). Upon further research on the source materials, it appears that the primary reference for ECOMATH is @sydsaeter2016. Thus, some problems may be from the aforementioned reference.
+
+In any case, this will serve as my primary repository of my personal notes (improved on part by Gemini and Claude, if need be).
+
+These notes are generally readable and comprehensible for the mathematically "illiterate." However, the author writes the notes intending that it be read when one understands most high school algebra (more or less, algebraic manipulation). These notes are personal works of the author intended to help future economics majors in their pursuit by demystifying the mathematical rigor of economics.

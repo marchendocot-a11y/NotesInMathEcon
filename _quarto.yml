@@ -3,11 +3,14 @@ project:
 
 website:
   title: "MarcheNOTES"
-  navbar:
-    left:
+  sidebar:
+    contents:
       - href: index.qmd
         text: Home
       - about.qmd
+      - linearalgebra.qmd
+      
+bibliography: references.bib
 
 format:
   html:

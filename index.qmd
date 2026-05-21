@@ -1,11 +1,14 @@
 ---
 title: "MarcheNOTES"
+author: "Marchen Kirk James I. Docot"
 ---
 
-This is a Quarto website.
+*This page is dedicated to my Nina.*
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This serves as the repository of all lecture notes related to R and its applications in mathematical finance, economics, statistics & probability, and
 
-```{r}
-1 + 1
-```
+This page will primarily be as a submission bin for all my lecture notes currently in my Mathematical Economics in R (LBYMATH) classes in De La Salle University, currently being taken this Term 3, A.Y. 2025-2026. However, I also plan for it to be a repository of my notes in my Financial Management (ACYFMG) series of courses, with corresponding R applications.
+
+This may be maintained in my further years in my economics journey, potentially as lecture notes for Economic Statistics, Econometrics, Advanced Financial Econometrics, and even as a thesis journal showcasing the journey for whatever thesis (whether in my economics thesis or accountancy thesis).
+
+For any questions and inquiries, feel free to check this site's [About](about.qmd) page.

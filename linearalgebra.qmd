@@ -1,0 +1,37 @@
+---
+title: "Linear Algebra"
+editor: visual
+---
+
+## Introduction to Linear Algebra
+
+> **Linear algebra** deals with a system of linear equations which usually express how one or more endogenous variables depend on several exogenous parameters.
+
+To understand what linear algebra entails aside from it formalizing solving "simultaneous" or systems of linear equations, it is apt to dissect this definition with accuracy.
+
+***"system of linear equations"***
+
+Linear equations need no introduction, it takes up the form: $Ax + Bx = C, A \geq 0$
+
+A **system** means that multiple linear equations are happening simultaneously, and it is trying to look for solutions that satisfies all the equations simultaneously.
+
+***"one or more endogenous variables"***
+
+Endogenous variables simply means dependent variables or "unknowns." These are the values that the system finds solutions for such that the endogenous variables satisfies all the equations in a system simultaneously.
+
+***"depend on several exogenous paramaters"***
+
+Parameters simply means variables that are constant.
+
+In a system wherein we have *m* equations and *n* unknowns, and no restriction on what *m* can be relative to *n* (i.e., it can be greater than, equal to, or less than), v.v., and if the unknowns are denoted as $x_1, x_2, x_3, ...,x_n$ , we write the system as:
+
+$$
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &= b_2 \\
+&\ \ \vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &= b_m
+\end{aligned}
+$$
+
+In this system $C =a_{11}, a_{12},...,a_{mn}$ are coefficients whereas $R = b_1, b_2,...,b_n$ are right-hand sides such that $C, R, \in \mathbb{R}$
