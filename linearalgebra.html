@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – MarcheNOTES</title>
+<title>Linear Algebra – MarcheNOTES</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -55,6 +35,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -88,6 +69,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,7 +111,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linearalgebra.html">Linear Algebra</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,13 +143,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link">
+  <a href="./linearalgebra.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Linear Algebra</span></a>
   </div>
 </li>
@@ -151,66 +161,71 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#marchen-kirk-james-i.-docot" id="toc-marchen-kirk-james-i.-docot" class="nav-link active" data-scroll-target="#marchen-kirk-james-i.-docot">Marchen Kirk James I. Docot</a>
-  <ul class="collapse">
-  <li><a href="#general-information" id="toc-general-information" class="nav-link" data-scroll-target="#general-information">General Information</a></li>
-  </ul></li>
+  <li><a href="#introduction-to-linear-algebra" id="toc-introduction-to-linear-algebra" class="nav-link active" data-scroll-target="#introduction-to-linear-algebra">Introduction to Linear Algebra</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Linear Algebra</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="mailto:marchen.docot@gmail.com" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Personal Email</span>
-  </a>
-  <a href="mailto:marchen_docot@dlsu.edu.ph" class="about-link" rel="" target="">
-    <i class="bi bi-envelope-at"></i>
-     <span class="about-link-text">School Email</span>
-  </a>
-  <a href="https://github.com/marchendocot-a11y" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<section id="marchen-kirk-james-i.-docot" class="level2">
-<h2 data-anchor-id="marchen-kirk-james-i.-docot">Marchen Kirk James I. Docot</h2>
-<p><strong>De La Salle University — Carlos L. Tiu School of Economics</strong></p>
-<p><em>Bachelor of Science in Applied Economics, major in Financial Economics &amp; Bachelor of Science in Accountancy</em></p>
-<hr>
-<section id="general-information" class="level3">
-<h3 data-anchor-id="general-information">General Information</h3>
-<p>The notes per topic will primarily be lecture notes derived from <a href="https://contactout.com/miko-johnson-co-68778">Mr.&nbsp;Miko Johnson Co’s</a> lectures and discussions in the course Mathematical Economics Laboratory (LBYMATH). For the purpose of clarity, I will be referring to the course as Mathematical Economics in R or simply by its course code.</p>
-<p>Some interjections in mathematical theory will be derived from <a href="https://www.linkedin.com/in/krista-danielle-yu-971577a1/">Dr.&nbsp;Krista Danielle Yu</a>’s lecture notes for the parent course – Mathematical Economics (ECOMATH). Upon further research on the source materials, it appears that the primary reference for ECOMATH is <span class="citation" data-cites="sydsaeter2016">Sydsæter et al. (<a href="#ref-sydsaeter2016" role="doc-biblioref">2016</a>)</span>. Thus, some problems may be from the aforementioned reference.</p>
-<p>In any case, this will serve as my primary repository of my personal notes (improved on part by Gemini and Claude, if need be).</p>
-<p>These notes are generally readable and comprehensible for the mathematically “illiterate.” However, the author writes the notes intending that it be read when one understands most high school algebra (more or less, algebraic manipulation). These notes are personal works of the author intended to help future economics majors in their pursuit by demystifying the mathematical rigor of economics.</p>
 
+<section id="introduction-to-linear-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-linear-algebra">Introduction to Linear Algebra</h2>
+<blockquote class="blockquote">
+<p><strong>Linear algebra</strong> deals with a system of linear equations which usually express how one or more endogenous variables depend on several exogenous parameters.</p>
+</blockquote>
+<p>To understand what linear algebra entails aside from it formalizing solving “simultaneous” or systems of linear equations, it is apt to dissect this definition with accuracy.</p>
+<p><strong><em>“system of linear equations”</em></strong></p>
+<p>Linear equations need no introduction, it takes up the form: <span class="math inline">\(Ax + Bx = C, A \geq 0\)</span></p>
+<p>A <strong>system</strong> means that multiple linear equations are happening simultaneously, and it is trying to look for solutions that satisfies all the equations simultaneously.</p>
+<p><strong><em>“one or more endogenous variables”</em></strong></p>
+<p>Endogenous variables simply means dependent variables or “unknowns.” These are the values that the system finds solutions for such that the endogenous variables satisfies all the equations in a system simultaneously.</p>
+<p><strong><em>“depend on several exogenous paramaters”</em></strong></p>
+<p>Parameters simply means variables that are constant.</p>
+<p>In a system wherein we have <em>m</em> equations and <em>n</em> unknowns, and no restriction on what <em>m</em> can be relative to <em>n</em> (i.e., it can be greater than, equal to, or less than), v.v., and if the unknowns are denoted as <span class="math inline">\(x_1, x_2, x_3, ...,x_n\)</span> , we write the system as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &amp;= b_2 \\
+&amp;\ \ \vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &amp;= b_m
+\end{aligned}
+\]</span></p>
+<p>In this system <span class="math inline">\(C =a_{11}, a_{12},...,a_{mn}\)</span> are coefficients whereas <span class="math inline">\(R = b_1, b_2,...,b_n\)</span> are right-hand sides such that <span class="math inline">\(C, R, \in \mathbb{R}\)</span></p>
 
 
 </section>
-</section>
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-sydsaeter2016" class="csl-entry" role="listitem">
-Sydsæter, Knut, Peter Hammond, Arne Strøm, and Andrés Carvajal. 2016. <em>Essential Mathematics for Economic Analysis</em>. 5th ed. Pearson.
-</div>
-</div></section></div></main></div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

@@ -1,16 +1,52 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MarcheNOTES",
+    "objectID": "linearalgebra.html",
+    "href": "linearalgebra.html",
+    "title": "Linear Algebra",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Linear algebra deals with a system of linear equations which usually express how one or more endogenous variables depend on several exogenous parameters.\n\nTo understand what linear algebra entails aside from it formalizing solving “simultaneous” or systems of linear equations, it is apt to dissect this definition with accuracy.\n“system of linear equations”\nLinear equations need no introduction, it takes up the form: \\(Ax + Bx = C, A \\geq 0\\)\nA system means that multiple linear equations are happening simultaneously, and it is trying to look for solutions that satisfies all the equations simultaneously.\n“one or more endogenous variables”\nEndogenous variables simply means dependent variables or “unknowns.” These are the values that the system finds solutions for such that the endogenous variables satisfies all the equations in a system simultaneously.\n“depend on several exogenous paramaters”\nParameters simply means variables that are constant.\nIn a system wherein we have m equations and n unknowns, and no restriction on what m can be relative to n (i.e., it can be greater than, equal to, or less than), v.v., and if the unknowns are denoted as \\(x_1, x_2, x_3, ...,x_n\\) , we write the system as:\n\\[\n\\begin{aligned}\na_{11}x_1 + a_{12}x_2 + \\dots + a_{1n}x_n &= b_1 \\\\\na_{21}x_1 + a_{22}x_2 + \\dots + a_{2n}x_n &= b_2 \\\\\n&\\ \\ \\vdots \\\\\na_{m1}x_1 + a_{m2}x_2 + \\dots + a_{mn}x_n &= b_m\n\\end{aligned}\n\\]\nIn this system \\(C =a_{11}, a_{12},...,a_{mn}\\) are coefficients whereas \\(R = b_1, b_2,...,b_n\\) are right-hand sides such that \\(C, R, \\in \\mathbb{R}\\)",
+    "crumbs": [
+      "Linear Algebra"
+    ]
+  },
+  {
+    "objectID": "linearalgebra.html#introduction-to-linear-algebra",
+    "href": "linearalgebra.html#introduction-to-linear-algebra",
+    "title": "Linear Algebra",
+    "section": "",
+    "text": "Linear algebra deals with a system of linear equations which usually express how one or more endogenous variables depend on several exogenous parameters.\n\nTo understand what linear algebra entails aside from it formalizing solving “simultaneous” or systems of linear equations, it is apt to dissect this definition with accuracy.\n“system of linear equations”\nLinear equations need no introduction, it takes up the form: \\(Ax + Bx = C, A \\geq 0\\)\nA system means that multiple linear equations are happening simultaneously, and it is trying to look for solutions that satisfies all the equations simultaneously.\n“one or more endogenous variables”\nEndogenous variables simply means dependent variables or “unknowns.” These are the values that the system finds solutions for such that the endogenous variables satisfies all the equations in a system simultaneously.\n“depend on several exogenous paramaters”\nParameters simply means variables that are constant.\nIn a system wherein we have m equations and n unknowns, and no restriction on what m can be relative to n (i.e., it can be greater than, equal to, or less than), v.v., and if the unknowns are denoted as \\(x_1, x_2, x_3, ...,x_n\\) , we write the system as:\n\\[\n\\begin{aligned}\na_{11}x_1 + a_{12}x_2 + \\dots + a_{1n}x_n &= b_1 \\\\\na_{21}x_1 + a_{22}x_2 + \\dots + a_{2n}x_n &= b_2 \\\\\n&\\ \\ \\vdots \\\\\na_{m1}x_1 + a_{m2}x_2 + \\dots + a_{mn}x_n &= b_m\n\\end{aligned}\n\\]\nIn this system \\(C =a_{11}, a_{12},...,a_{mn}\\) are coefficients whereas \\(R = b_1, b_2,...,b_n\\) are right-hand sides such that \\(C, R, \\in \\mathbb{R}\\)",
+    "crumbs": [
+      "Linear Algebra"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "De La Salle University — Carlos L. Tiu School of Economics\nBachelor of Science in Applied Economics, major in Financial Economics & Bachelor of Science in Accountancy\n\n\n\nThe notes per topic will primarily be lecture notes derived from Mr. Miko Johnson Co’s lectures and discussions in the course Mathematical Economics Laboratory (LBYMATH). For the purpose of clarity, I will be referring to the course as Mathematical Economics in R or simply by its course code.\nSome interjections in mathematical theory will be derived from Dr. Krista Danielle Yu’s lecture notes for the parent course – Mathematical Economics (ECOMATH). Upon further research on the source materials, it appears that the primary reference for ECOMATH is Sydsæter et al. (2016). Thus, some problems may be from the aforementioned reference.\nIn any case, this will serve as my primary repository of my personal notes (improved on part by Gemini and Claude, if need be).\nThese notes are generally readable and comprehensible for the mathematically “illiterate.” However, the author writes the notes intending that it be read when one understands most high school algebra (more or less, algebraic manipulation). These notes are personal works of the author intended to help future economics majors in their pursuit by demystifying the mathematical rigor of economics.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#marchen-kirk-james-i.-docot",
+    "href": "about.html#marchen-kirk-james-i.-docot",
+    "title": "About",
+    "section": "",
+    "text": "De La Salle University — Carlos L. Tiu School of Economics\nBachelor of Science in Applied Economics, major in Financial Economics & Bachelor of Science in Accountancy\n\n\n\nThe notes per topic will primarily be lecture notes derived from Mr. Miko Johnson Co’s lectures and discussions in the course Mathematical Economics Laboratory (LBYMATH). For the purpose of clarity, I will be referring to the course as Mathematical Economics in R or simply by its course code.\nSome interjections in mathematical theory will be derived from Dr. Krista Danielle Yu’s lecture notes for the parent course – Mathematical Economics (ECOMATH). Upon further research on the source materials, it appears that the primary reference for ECOMATH is Sydsæter et al. (2016). Thus, some problems may be from the aforementioned reference.\nIn any case, this will serve as my primary repository of my personal notes (improved on part by Gemini and Claude, if need be).\nThese notes are generally readable and comprehensible for the mathematically “illiterate.” However, the author writes the notes intending that it be read when one understands most high school algebra (more or less, algebraic manipulation). These notes are personal works of the author intended to help future economics majors in their pursuit by demystifying the mathematical rigor of economics.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MarcheNOTES",
+    "section": "",
+    "text": "This page is dedicated to my Nina.\nThis serves as the repository of all lecture notes related to R and its applications in mathematical finance, economics, statistics & probability, and\nThis page will primarily be as a submission bin for all my lecture notes currently in my Mathematical Economics in R (LBYMATH) classes in De La Salle University, currently being taken this Term 3, A.Y. 2025-2026. However, I also plan for it to be a repository of my notes in my Financial Management (ACYFMG) series of courses, with corresponding R applications.\nThis may be maintained in my further years in my economics journey, potentially as lecture notes for Economic Statistics, Econometrics, Advanced Financial Econometrics, and even as a thesis journal showcasing the journey for whatever thesis (whether in my economics thesis or accountancy thesis).\nFor any questions and inquiries, feel free to check this site’s About page.",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]
